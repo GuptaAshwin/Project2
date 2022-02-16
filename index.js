@@ -7,6 +7,8 @@ let searchbarList = document.getElementById('searchbar-list');
 let counter = document.getElementById("counter");
 let favarray = [];
 const resultGrid = document.getElementById('result-grid');
+let list=[]; 
+ list = JSON.parse(localStorage.getItem('favlistarr'));
 
 // load movies from API
 async function loadMovies(searchTerm) {
@@ -116,7 +118,7 @@ function counterfunct(favarray) {
     counter.innerHTML = favarray.length;
 
 }
-
+counterfunct(list);
 // when the click is done out of the searchbar list then to hide the list
 window.addEventListener('click', (event) => {
 

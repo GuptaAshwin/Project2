@@ -62,6 +62,7 @@ function remove(value){
             list.splice(i,1); 
         }
     }
+    localStorage.setItem('favlistarr', JSON.stringify(list));
     favouritebarList.innerHTML="";
     fetching(list);
 }
